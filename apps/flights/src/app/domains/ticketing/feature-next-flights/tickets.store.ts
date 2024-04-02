@@ -1,6 +1,7 @@
 import { patchState, signalStore, withMethods, withState } from "@ngrx/signals";
 import { Ticket, TicketService } from "../data";
 import { inject } from "@angular/core";
+import { withDevtools } from '@angular-architects/ngrx-toolkit';
 
 export const TicketStore = signalStore(
     { providedIn: 'root' },
@@ -15,7 +16,8 @@ export const TicketStore = signalStore(
                 }
             );
         }
-    }))
+    })),
+    withDevtools('ticket')
 );
 
 
