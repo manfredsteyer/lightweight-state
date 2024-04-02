@@ -5,11 +5,12 @@ import { CheckinComponent } from './checkin/checkin.component';
 import { NextFlightsService } from './next-flights.service';
 import { RouterModule } from '@angular/router';
 import { NEXT_FLIGHTS_ROUTES } from './next-flights.routes';
+import { FlightCardComponent } from '@demo/shared/ui-common';
 
 @NgModule({
-  declarations: [NextFlightsComponent, CheckinComponent],
-  imports: [CommonModule, RouterModule.forChild(NEXT_FLIGHTS_ROUTES)],
-  providers: [NextFlightsService],
-  exports: [NextFlightsComponent],
+    declarations: [NextFlightsComponent, CheckinComponent],
+    providers: [NextFlightsService],
+    exports: [NextFlightsComponent],
+    imports: [CommonModule, RouterModule.forChild(NEXT_FLIGHTS_ROUTES), FlightCardComponent]
 })
 export class NextFlightsModule {}

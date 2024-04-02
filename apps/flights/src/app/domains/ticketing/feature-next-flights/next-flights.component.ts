@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { NextFlightsService } from './next-flights.service';
 
 @Component({
@@ -8,5 +8,11 @@ import { NextFlightsService } from './next-flights.service';
 })
 export class NextFlightsComponent {
   nextFlightsService = inject(NextFlightsService);
-  flights$ = this.nextFlightsService.load();
+
+  tickets = this.nextFlightsService.tickets;
+  flights = computed(() => this.tickets().map(t => t.flight));
+
+  constructor() {
+    this.nextFlightsService.load();
+  }
 }

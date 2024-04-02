@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Flight } from '../data';
+import { Injectable, computed, inject } from '@angular/core';
+import { AuthStore } from '@demo/shared/util-auth';
+import { TicketStore } from './tickets.store';
 
 @Injectable()
 export class NextFlightsService {
-  load(): Observable<Flight[]> {
-    const date = new Date().toISOString();
+  private authStore = inject(AuthStore);
+  private ticketStore = inject(TicketStore);
 
-    return of([
-      { id: 7, from: 'Paris', to: 'London', date, delayed: false },
-      { id: 8, from: 'London', to: 'Paris', date, delayed: false },
-      { id: 9, from: 'Paris', to: 'Berlin', date, delayed: false },
-    ]);
+  readonly tickets = this.ticketStore.tickets;
+  readonly flights = computed(() => this.tickets().map(t => t.flight));
+  
+  load(): void {
+    this.ticketStore.loadByPassenger(this.authStore.userId());
   }
 }

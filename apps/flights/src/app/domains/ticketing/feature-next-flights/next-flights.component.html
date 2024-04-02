@@ -1,4 +1,5 @@
 <h2>Your Next Flights</h2>
-<pre>{{ flights$ | async | json }}</pre>
 
-<app-checkin></app-checkin>
+@for(f of flights(); track f.id) {
+    <app-flight-card [item]="f"></app-flight-card>
+}

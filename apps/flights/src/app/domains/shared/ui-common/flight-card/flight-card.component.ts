@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-import { FlightEditReactiveComponent } from '../flight-edit-reactive/flight-edit-reactive.component';
+import { FlightEditReactiveComponent } from '../../../ticketing/feature-booking/flight-edit-reactive/flight-edit-reactive.component';
 import { RouterLink } from '@angular/router';
 import { CityPipe, StatusToggleComponent } from '@demo/shared/ui-common';
 import { initFlight } from '@demo/ticketing/data';

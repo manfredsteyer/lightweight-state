@@ -1,8 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FlightCardComponent } from '../flight-card/flight-card.component';
-import { CityPipe, FormUpdateDirective } from '@demo/shared/ui-common';
+import { CityPipe, FlightCardComponent, FormUpdateDirective } from '@demo/shared/ui-common';
 import { FlightFilter } from '@demo/ticketing/data';
 import { BookingStore } from '../booking.store';
 
