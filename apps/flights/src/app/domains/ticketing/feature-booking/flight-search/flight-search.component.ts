@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FlightCardComponent } from '../flight-card/flight-card.component';
 import { CityPipe, FormUpdateDirective } from '@demo/shared/ui-common';
-import { Flight, FlightFilter, FlightService } from '@demo/ticketing/data';
+import { FlightFilter } from '@demo/ticketing/data';
+import { BookingStore } from '../booking.store';
 
 @Component({
   selector: 'app-flight-search',
@@ -13,11 +14,11 @@ import { Flight, FlightFilter, FlightService } from '@demo/ticketing/data';
   imports: [CommonModule, FormsModule, CityPipe, FlightCardComponent, FormUpdateDirective],
 })
 export class FlightSearchComponent {
-  private flightService = inject(FlightService);
+  private store = inject(BookingStore);
 
-  from = signal('Paris');
-  to = signal('London');
-  flights = signal<Flight[]>([]);
+  from = this.store.filter.from;
+  to = this.store.filter.to;
+  flights = this.store.entities;
 
   basket = signal<Record<number, boolean>>({
     3: true,
@@ -25,25 +26,15 @@ export class FlightSearchComponent {
   });
 
   search(): void {
-    this.flightService.find(this.from(), this.to()).subscribe({
-      next: (flights) => {
-        this.flights.set(flights);
-      },
-      error: (errResp) => {
-        console.error('Error loading flights', errResp);
-      },
-    });
+    this.store.load();
   }
 
-  updateFilter(filter: FlightFilter) {
-    console.log('updateFilter', filter);
+  updateFilter(filter: FlightFilter): void {
+    this.store.updateFilter(filter);
   }
 
   updateBasket(flightId: number, selected: boolean): void {
-    this.basket.update((basket) => ({
-      ...basket,
-      [flightId]: selected,
-    }));
+    this.store.updateSelected(flightId, selected);
   }
 
 }

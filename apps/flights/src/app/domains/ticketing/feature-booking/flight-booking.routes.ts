@@ -27,7 +27,7 @@ export const FLIGHT_BOOKING_ROUTES: Routes = [
         component: FlightEditComponent,
         resolve: {
           flight: (r: ActivatedRouteSnapshot) =>
-            inject(FlightService).findById(r.params['id']),
+            inject(FlightService).loadById(r.params['id']),
         },
       },
       {
