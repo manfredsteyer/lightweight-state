@@ -2,7 +2,7 @@
   <h2 class="title">Flight Search</h2>
 </div>
 
-<form>
+<form (appUpdate)="updateFilter($event)">
   <div class="form-group">
     <label for="from">From:</label>
     <input [(ngModel)]="from" id="from" name="from" class="form-control" />
@@ -14,7 +14,6 @@
 
   <div class="form-group">
     <button (click)="search()" class="btn btn-default">Search</button>
-    <button (click)="delay()" class="btn btn-default">Delay</button>
   </div>
 </form>
 

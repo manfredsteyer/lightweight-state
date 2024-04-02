@@ -16,3 +16,4 @@ export * from './tab/tab.component';
 export * from './tab-navigator/tab-navigator.component';
 export * from './tabbed-pane/tabbed-pane.component';
 export * from './tabbed-pane/tabbed-pane.service';
+export * from './form-update.directive';
