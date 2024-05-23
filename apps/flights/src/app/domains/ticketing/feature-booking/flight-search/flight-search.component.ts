@@ -5,6 +5,8 @@ import { CityPipe, FlightCardComponent, FormUpdateDirective } from '@demo/shared
 import { FlightFilter } from '@demo/ticketing/data';
 import { BookingStore } from '../booking.store';
 
+// import { LuggageService } from '@demo/luggage/data';
+
 @Component({
   selector: 'app-flight-search',
   standalone: true,
