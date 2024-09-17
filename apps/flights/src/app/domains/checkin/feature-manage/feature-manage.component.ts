@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CheckinService } from '../data';
 import { CityPipe } from '@demo/shared/ui-common'
+import { ClickWithWarningDirective } from '../../shared/ui-common'
 
 // import { } from '../../ticketing/data';
 
 @Component({
   selector: 'app-feature-manage',
   standalone: true,
-  imports: [CommonModule, FormsModule, CityPipe],
+  imports: [CommonModule, FormsModule, CityPipe, ClickWithWarningDirective],
   templateUrl: './feature-manage.component.html',
   styleUrls: ['./feature-manage.component.css'],
 })

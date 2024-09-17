@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { Luggage, LuggageService } from '@demo/luggage/data';
 import { LuggageCardComponent } from '@demo/luggage/ui-common';
+import { CityPipe } from '@demo/shared/ui-common';
 
 @Component({
   selector: 'app-checkin',
   standalone: true,
-  imports: [CommonModule, LuggageCardComponent],
+  imports: [CommonModule, LuggageCardComponent, CityPipe],
   templateUrl: './checkin.component.html',
   styleUrls: ['./checkin.component.css'],
 })
