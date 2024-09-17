@@ -5,6 +5,9 @@ import { FlightCardComponent } from '../flight-card/flight-card.component';
 import { CityPipe, FormUpdateDirective } from '@demo/shared/ui-common';
 import { Flight, FlightFilter, FlightService } from '@demo/ticketing/data';
 
+// import { CheckinService } from '@demo/checkin/data';
+
+
 @Component({
   selector: 'app-flight-search',
   standalone: true,
