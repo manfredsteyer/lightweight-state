@@ -1,0 +1,36 @@
+{
+  "scopes": [
+    "apps/flights/src/app/domains/ticketing/data",
+    "apps/flights/src/app/domains/ticketing/feature-booking",
+    "apps/flights/src/app/domains/ticketing/feature-next-flights",
+    "apps/flights/src/app/domains/luggage/data",
+    "apps/flights/src/app/domains/luggage/feature-checkin",
+    "apps/flights/src/app/domains/luggage/ui-common",
+    "apps/flights/src/app/domains/shared"
+  ],
+  "groups": [
+    "apps/flights/src/app/domains/luggage",
+    "apps/flights/src/app/domains/ticketing",
+    "apps/flights/src/app/domains",
+    "apps/flights/src/app",
+    "apps/flights/src",
+    "apps/flights",
+    "apps"
+  ],
+  "entries": [],
+  "filter": {
+    "files": [],
+    "logs": []
+  },
+  "aliases": {},
+  "teams": {
+    "example-team-a": [
+      "John Doe",
+      "Jane Doe"
+    ],
+    "example-team-b": [
+      "Max Muster",
+      "Susi Sorglos"
+    ]
+  }
+}
