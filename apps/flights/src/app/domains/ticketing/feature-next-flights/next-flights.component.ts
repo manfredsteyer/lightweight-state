@@ -1,5 +1,5 @@
-import { Component, computed, inject } from '@angular/core';
-import { NextFlightsService } from './next-flights.service';
+import { Component, inject } from '@angular/core';
+import { TicketStore } from './tickets.store';
 
 @Component({
   selector: 'app-next-flights',
@@ -7,12 +7,11 @@ import { NextFlightsService } from './next-flights.service';
   styleUrls: ['./next-flights.component.css'],
 })
 export class NextFlightsComponent {
-  nextFlightsService = inject(NextFlightsService);
+  store = inject(TicketStore);
 
-  tickets = this.nextFlightsService.tickets;
-  flights = computed(() => this.tickets().map(t => t.flight));
+  flights = this.store.flights;
 
   constructor() {
-    this.nextFlightsService.load();
+    this.store.loadByPassenger();
   }
 }
