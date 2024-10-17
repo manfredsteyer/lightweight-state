@@ -10,10 +10,19 @@ import {
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-import { FlightEditReactiveComponent } from '../../../ticketing/feature-booking/flight-edit-reactive/flight-edit-reactive.component';
+// import { FlightEditReactiveComponent } from '../../../ticketing/feature-booking/flight-edit-reactive/flight-edit-reactive.component';
 import { RouterLink } from '@angular/router';
 import { CityPipe } from '../city.pipe';
 import { StatusToggleComponent } from '../status-toggle/status-toggle.component';
+// eslint-disable-next-line @softarc/sheriff/dependency-rule
+
+const initFlight = {
+  id: 0,
+  from: '',
+  to: '',
+  date: '',
+  delayed: false,
+};
 
 @Component({
   selector: 'app-flight-card',
@@ -43,9 +52,9 @@ export class FlightCardComponent {
   }
 
   edit() {
-    this.dialog.open(FlightEditReactiveComponent, {
-      data: { flight: this.item },
-    });
+    // this.dialog.open(FlightEditReactiveComponent, {
+    //   data: { flight: this.item },
+    // });
   }
 
   blink() {

@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Luggage } from './luggage';
 import { Observable, of } from 'rxjs';
+import { AuthService } from '@demo/shared/util-auth';
+
+console.log(AuthService);
 
 @Injectable({
   providedIn: 'root',
