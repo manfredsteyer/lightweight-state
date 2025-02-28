@@ -6,11 +6,10 @@ import { FlightFilter } from '@demo/ticketing/data';
 import { BookingStore } from '../booking.store';
 
 @Component({
-  selector: 'app-flight-search',
-  standalone: true,
-  templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css'],
-  imports: [CommonModule, FormsModule, FlightCardComponent, FormUpdateDirective],
+    selector: 'app-flight-search',
+    templateUrl: './flight-search.component.html',
+    styleUrls: ['./flight-search.component.css'],
+    imports: [CommonModule, FormsModule, FlightCardComponent, FormUpdateDirective]
 })
 export class FlightSearchComponent {
   private store = inject(BookingStore);

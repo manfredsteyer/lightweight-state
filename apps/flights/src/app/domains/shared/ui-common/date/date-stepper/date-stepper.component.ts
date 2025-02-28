@@ -6,11 +6,10 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 type OnChange = (value: Date) => void;
 
 @Component({
-  selector: 'app-date-stepper',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './date-stepper.component.html',
-  styleUrls: ['./date-stepper.component.css'],
+    selector: 'app-date-stepper',
+    imports: [CommonModule],
+    templateUrl: './date-stepper.component.html',
+    styleUrls: ['./date-stepper.component.css']
 })
 export class DateStepperComponent implements ControlValueAccessor {
   ngControl = inject(NgControl);

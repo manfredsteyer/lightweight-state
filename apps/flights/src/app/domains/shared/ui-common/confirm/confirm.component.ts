@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 
 @Component({
-  selector: 'app-confirm',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './confirm.component.html',
-  styleUrls: ['./confirm.component.css'],
+    selector: 'app-confirm',
+    imports: [CommonModule],
+    templateUrl: './confirm.component.html',
+    styleUrls: ['./confirm.component.css']
 })
 export class ConfirmComponent {
   message = inject(DIALOG_DATA) as string;

@@ -62,11 +62,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/miles/**/*.ts", "apps/miles/**/*.html"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",

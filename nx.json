@@ -1,7 +1,4 @@
 {
-  "affected": {
-    "defaultBase": "lab500-enterprise-starter"
-  },
   "defaultProject": "flights",
   "namedInputs": {
     "sharedGlobals": [],
@@ -34,14 +31,6 @@
       ],
       "cache": true
     },
-    "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/eslint.config.js"
-      ],
-      "cache": true
-    },
     "@nx/jest:jest": {
       "cache": true,
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
@@ -54,6 +43,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/eslint:lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/eslint.config.js"
+      ],
+      "cache": true
     }
   },
   "generators": {
@@ -72,5 +69,8 @@
     "@nx/angular:component": {
       "style": "css"
     }
-  }
+  },
+  "useInferencePlugins": false,
+  "defaultBase": "lab500-enterprise-starter",
+  "useLegacyCache": true
 }

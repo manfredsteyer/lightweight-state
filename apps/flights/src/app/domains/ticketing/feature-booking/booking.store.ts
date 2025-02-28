@@ -4,7 +4,7 @@ import { withDataService } from '@demo/shared/util-common';
 import { withDevtools } from '@angular-architects/ngrx-toolkit';
 
 export const BookingStore = signalStore(
-    { providedIn: 'root' },
+    { providedIn: 'root', protectedState: false },
     withDataService({
         dataServiceToken: FlightService,
         filter: { from: 'London', to: 'Paris' }

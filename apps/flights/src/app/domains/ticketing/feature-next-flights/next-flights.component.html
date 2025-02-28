@@ -1,5 +1,7 @@
 <h2>Your Next Flights</h2>
 
 @for(f of flights(); track f.id) {
-    <app-flight-card [item]="f"></app-flight-card>
+    <div class="flight">
+        <app-flight-card [item]="f"></app-flight-card>
+    </div>
 }

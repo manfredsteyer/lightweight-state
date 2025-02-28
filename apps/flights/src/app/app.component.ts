@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import {
   NavigationCancel,
@@ -12,14 +12,12 @@ import { filter, map, merge, Observable } from 'rxjs';
 import { SidebarComponent } from './shell/sidebar/sidebar.component';
 import { NavbarComponent } from './shell/navbar/navbar.component';
 import { ConfigService } from '@demo/shared/util-config';
-import { UiCommonComponent } from '@flight-demo/ui-common';
 
 @Component({
-  standalone: true,
-  imports: [SidebarComponent, NavbarComponent, RouterOutlet, AsyncPipe, NgIf, UiCommonComponent],
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    imports: [SidebarComponent, NavbarComponent, RouterOutlet, AsyncPipe],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Hello World!';

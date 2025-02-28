@@ -10,11 +10,10 @@ import { initFlight } from '@demo/ticketing/data';
 import { CanExit } from '@demo/shared/util-common';
 
 @Component({
-  selector: 'app-flight-edit',
-  standalone: true,
-  imports: [CommonModule, FormsModule, DateCvaDirective],
-  templateUrl: './flight-edit.component.html',
-  styleUrls: ['./flight-edit.component.css'],
+    selector: 'app-flight-edit',
+    imports: [CommonModule, FormsModule, DateCvaDirective],
+    templateUrl: './flight-edit.component.html',
+    styleUrls: ['./flight-edit.component.css']
 })
 export class FlightEditComponent implements OnInit, CanExit {
   private route = inject(ActivatedRoute);

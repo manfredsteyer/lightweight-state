@@ -10,8 +10,6 @@ import {
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-// import { FlightEditReactiveComponent } from '../../../ticketing/feature-booking/flight-edit-reactive/flight-edit-reactive.component';
-import { RouterLink } from '@angular/router';
 import { CityPipe } from '../city.pipe';
 import { StatusToggleComponent } from '../status-toggle/status-toggle.component';
 // eslint-disable-next-line @softarc/sheriff/dependency-rule
@@ -25,11 +23,10 @@ const initFlight = {
 };
 
 @Component({
-  selector: 'app-flight-card',
-  standalone: true,
-  imports: [CommonModule, CityPipe, StatusToggleComponent, RouterLink],
-  templateUrl: './flight-card.component.html',
-  styleUrls: ['./flight-card.component.css'],
+    selector: 'app-flight-card',
+    imports: [CommonModule, CityPipe, StatusToggleComponent],
+    templateUrl: './flight-card.component.html',
+    styleUrls: ['./flight-card.component.css']
 })
 export class FlightCardComponent {
   private element = inject(ElementRef);

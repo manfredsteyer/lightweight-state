@@ -10,11 +10,10 @@ import { CommonModule } from '@angular/common';
 import { TabbedPaneService } from '../tabbed-pane/tabbed-pane.service';
 
 @Component({
-  selector: 'app-tab-navigator',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './tab-navigator.component.html',
-  styleUrls: ['./tab-navigator.component.css'],
+    selector: 'app-tab-navigator',
+    imports: [CommonModule],
+    templateUrl: './tab-navigator.component.html',
+    styleUrls: ['./tab-navigator.component.css']
 })
 export class TabNavigatorComponent implements OnInit {
   @Input() page = 0;

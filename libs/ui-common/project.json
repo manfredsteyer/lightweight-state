@@ -3,8 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui-common/src",
   "prefix": "flight-demo",
-  "tags": [],
   "projectType": "library",
+  "tags": [],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
@@ -14,14 +14,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ui-common/**/*.ts",
-          "libs/ui-common/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   }
 }

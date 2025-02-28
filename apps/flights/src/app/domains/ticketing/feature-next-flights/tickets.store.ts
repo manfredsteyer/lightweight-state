@@ -11,7 +11,7 @@ import { withDevtools } from '@angular-architects/ngrx-toolkit';
 import { AuthStore } from '@demo/shared/util-auth';
 
 export const TicketStore = signalStore(
-  { providedIn: 'root' },
+  { providedIn: 'root', protectedState: false },
   withState({
     tickets: [] as Ticket[],
   }),

@@ -5,11 +5,10 @@ import { Luggage, LuggageService } from '@demo/luggage/data';
 import { LuggageCardComponent } from '@demo/luggage/ui-common';
 
 @Component({
-  selector: 'app-checkin',
-  standalone: true,
-  imports: [CommonModule, LuggageCardComponent],
-  templateUrl: './checkin.component.html',
-  styleUrls: ['./checkin.component.css'],
+    selector: 'app-checkin',
+    imports: [CommonModule, LuggageCardComponent],
+    templateUrl: './checkin.component.html',
+    styleUrls: ['./checkin.component.css']
 })
 export class CheckinComponent implements OnInit {
   luggageService = inject(LuggageService);

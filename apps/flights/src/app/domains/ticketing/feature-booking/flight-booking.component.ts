@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-flight-booking',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: './flight-booking.component.html',
-  styleUrls: ['./flight-booking.component.css'],
+    selector: 'app-flight-booking',
+    imports: [CommonModule, RouterLink, RouterOutlet],
+    templateUrl: './flight-booking.component.html',
+    styleUrls: ['./flight-booking.component.css']
 })
 export class FlightBookingComponent {}

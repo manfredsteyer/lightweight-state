@@ -14,12 +14,11 @@ import { TabNavigatorComponent } from '../tab-navigator/tab-navigator.component'
 import { TabbedPaneService } from './tabbed-pane.service';
 
 @Component({
-  selector: 'app-tabbed-pane',
-  standalone: true,
-  templateUrl: './tabbed-pane.component.html',
-  styleUrls: ['./tabbed-pane.component.css'],
-  imports: [CommonModule, TabNavigatorComponent],
-  providers: [TabbedPaneService],
+    selector: 'app-tabbed-pane',
+    templateUrl: './tabbed-pane.component.html',
+    styleUrls: ['./tabbed-pane.component.css'],
+    imports: [CommonModule, TabNavigatorComponent],
+    providers: [TabbedPaneService]
 })
 export class TabbedPaneComponent implements AfterContentInit, AfterViewInit {
   @ContentChildren(TabComponent)
