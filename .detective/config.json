@@ -1,9 +1,9 @@
 {
   "scopes": [
-    "apps/flights/src/app/domains/luggage",
-    "apps/flights/src/app/domains/ticketing",
     "apps/flights/src/app/domains/shared",
-    "apps/flights/src/app/domains/checkin"
+    "apps/flights/src/app/domains/luggage",
+    "apps/flights/src/app/domains/checkin",
+    "apps/flights/src/app/domains/ticketing"
   ],
   "groups": [
     "apps/flights/src/app/domains",
@@ -27,7 +27,6 @@
       "Max Muster",
       "Susi Sorglos",
       "Manfred Steyer"
-
     ]
   },
   "focus": "apps/flights/src/app/domains"

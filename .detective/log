@@ -1,3 +1,16 @@
+"Manfred Steyer <manfred.steyer@gmx.net>,Thu Oct 17 16:06:07 2024 +0200	ef503861b81c43f6fa60967fb5d3f3a0d5f5239b,prepare for ng-love"
+34	0	.detective/config.json
+1	0	.detective/hash
+267	0	.detective/log
+5	0	apps/flights/src/app/app.routes.ts
+4	0	apps/flights/src/app/domains/checkin/data/checkin.service.ts
+3	0	apps/flights/src/app/domains/luggage/data/luggage.service.ts
+2	2	apps/flights/src/app/domains/shared/ui-common/flight-card/flight-card.component.html
+13	4	apps/flights/src/app/domains/shared/ui-common/flight-card/flight-card.component.ts
+124	54	package-lock.json
+1	0	package.json
+1	1	sheriff.config.ts
+
 "Manfred Steyer <manfred.steyer@gmx.net>,Thu Oct 17 15:20:49 2024 +0200	794fb55421a1ba3a54284f7a05abc4061f696667,fix dep issues"
 3	2	apps/flights/src/app/domains/shared/ui-common/flight-card/flight-card.component.ts
 

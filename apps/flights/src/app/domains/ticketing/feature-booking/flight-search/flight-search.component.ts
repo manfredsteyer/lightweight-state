@@ -1,18 +1,16 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CityPipe, FlightCardComponent, FormUpdateDirective } from '@demo/shared/ui-common';
+import { FlightCardComponent, FormUpdateDirective } from '@demo/shared/ui-common';
 import { FlightFilter } from '@demo/ticketing/data';
 import { BookingStore } from '../booking.store';
-
-// import { LuggageService } from '@demo/luggage/data';
 
 @Component({
   selector: 'app-flight-search',
   standalone: true,
   templateUrl: './flight-search.component.html',
   styleUrls: ['./flight-search.component.css'],
-  imports: [CommonModule, FormsModule, CityPipe, FlightCardComponent, FormUpdateDirective],
+  imports: [CommonModule, FormsModule, FlightCardComponent, FormUpdateDirective],
 })
 export class FlightSearchComponent {
   private store = inject(BookingStore);
