@@ -23,6 +23,10 @@ export class FlightSearchComponent {
   });
 
   search(): void {
+    this.store.updateFilter({
+      from: this.from(),
+      to: this.to()
+    });
     this.store.load();
   }
 
