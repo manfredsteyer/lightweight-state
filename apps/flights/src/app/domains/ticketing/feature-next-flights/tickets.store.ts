@@ -38,14 +38,3 @@ export const TicketStore = signalStore(
   withDevtools('ticket')
 );
 
-/*
- loadByPassenger: rxMethod<number>(pipe(
-            switchMap((id) => ticketService.load(id).pipe(
-                tap((tickets) => patchState(store, { tickets })),
-                catchError((error) => {
-                    console.error('error', error);
-                    return of([]);
-                })
-            ))
-        ))
-*/
