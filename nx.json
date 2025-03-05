@@ -72,5 +72,5 @@
   },
   "useInferencePlugins": false,
   "defaultBase": "lab500-enterprise-starter",
-  "useLegacyCache": true
+  "useLegacyCache": false
 }
