@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { FlightCardComponent } from '@demo/shared/ui-common';
 import { BookingStore } from '../booking.store';
 
+// import { CheckinService } from '@demo/checkin/data';
+
 @Component({
     selector: 'app-flight-search',
     templateUrl: './flight-search.component.html',
