@@ -15,7 +15,6 @@ export class DateStepperComponent implements ControlValueAccessor {
   ngControl = inject(NgControl);
   date = new Date();
   _onChange: OnChange = () => {
-    null;
   };
 
   constructor() {
@@ -32,7 +31,6 @@ export class DateStepperComponent implements ControlValueAccessor {
 
   registerOnTouched(): void {
     // Not used here
-    null;
   }
 
   next(): void {
